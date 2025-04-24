@@ -8,8 +8,8 @@ class DataHandler:
         self.df = None
         self.original_df = None
 
-    def load_data(self, file_path):
-        self.df = pd.read_csv(file_path)
+    def load_data(self):
+        self.df = pd.read_csv(self.filepath, index_col=0, parse_dates=True)
 
     def select_columns(self):
         columns = ['Date', 'Open', 'High', 'Low', 'Close']
