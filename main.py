@@ -11,14 +11,13 @@ def main():
     print("1. Pré-processando os dados...")
     preprocessor = DataHandler(filepath='data/dados.csv')
     preprocessor.load_data()
-    preprocessor.calculate_candle_features()
+    preprocessor.select_columns()
     preprocessor.remove_outliers()
-    preprocessor.normalize_features()
-    preprocessor.combine_features()
+    preprocessor.copy_original()
+    preprocessor.normalize()
+    preprocessor.add_candle_features()
+    preprocessor.remove_outliers()
     
-    data = preprocessor.get_normalized_data()
-    data_original = preprocessor.get_original_data()
-
     # ========== 2. Clusterização ==========
     print("2. Aplicando clusterização...")
     clusterer = ClusteringModel(data)
