@@ -1,5 +1,5 @@
 # 📈 Aprendizado por Reforço em Padrões de Candlestick Clusterizados
-![Illustrative Image](/outputs/rl_actions_plot.png)
+![Illustrative Image]("/outputs/rl_actions_plot.png")
 
 Este projeto combina **análise técnica de candles**, **clusterização** de padrões e **aprendizado por reforço (Q-Learning)** para aprender uma política de operação no mercado financeiro.
 
